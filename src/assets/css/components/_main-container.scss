@@ -1,0 +1,17 @@
+.main-container {
+	margin-inline: auto;
+	padding-inline: 16px;
+	max-width: 1282px;
+
+	@include media('md') {
+		padding-inline: 32px;
+	}
+
+	&_md {
+		max-width: 866px;
+	}
+
+	&_lg {
+		max-width: 1074px;
+	}
+}

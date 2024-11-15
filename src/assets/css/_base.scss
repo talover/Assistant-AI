@@ -1,0 +1,48 @@
+:root {
+  --bg-main: #fcefde;
+  --black-main: #272727;
+  --red-main: #c90e25;
+  --white-main: #fff;
+
+  --font-family: "Fira Sans Condensed", sans-serif;
+  --second-family: "SONGER Condensed", sans-serif;
+  --third-family: "Fira Sans Extra Condensed", sans-serif;
+  //--font3: "Fira Sans", sans-serif;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.375;
+  font-family: var(--font-family);
+  color: var(--black-main);
+  background: var(--bg-main);
+}
+
+button,
+input {
+  font-family: var(--font-family);
+}
+
+.page-content {
+  width: 100%;
+  flex: 1;
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}markup rig{% endblock %}
+{% block body %}
+	<div id="main" class="main">
+		{% include 'partials/header.twig' with {'loggedIn': loggedIn} %}
+
+		<div class="page-content">
+			{% block page %}
+
+			{% endblock %}
+		</div>
+		{% block beforeFooter %}{% endblock %}
+		{% include 'partials/footer.twig' %}
+	</div>
+{% endblock %}
+
