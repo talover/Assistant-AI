@@ -1,0 +1,11 @@
+.section-title {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 1.09;
+	margin: 0;
+
+	@include media('md') {
+		font-size: 32px;
+		line-height: 1.12;
+	}
+}

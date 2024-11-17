@@ -1,7 +1,25 @@
 <section class="benefits">
 	<div class="benefits__inner">
-		<div class="benefits__bg">
-			<div class="benefits__bg-inner"></div>
+		<div class="benefits__cont">
+			<div class="main-container">
+				<h2 class="text_center section-title"><span class="text-color_primary">Преимущества</span> <br class="hidden_sm">использования</h2>
+			</div>
+
+			<div class="benefits__bg"></div>
+		</div>
+
+		<div class="main-container benefits__list">
+			{% for item in benefits %}
+				<div class="benefits__item benefits__item_{{ loop.index }}">
+					<div class="benefits__item-bg benefits__item-bg_{{ loop.index }}"></div>
+					<div class="benefits__item-inner">
+						<div class="benefits__item-cont">
+							<h4 class="benefits__item-name">{{ item.name }}</h4>
+							<p class="benefits__item-desc">{{ item.desc }}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

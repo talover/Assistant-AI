@@ -1,0 +1,15 @@
+.text {
+
+}
+
+@include apply-style(text_start, (
+		text-align: left
+));
+
+@include apply-style(text_center, (
+		text-align: center
+));
+
+@include apply-style(text_end, (
+		text-align: right
+));

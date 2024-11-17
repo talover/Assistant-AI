@@ -24,7 +24,7 @@
 		font-size: 26px;
 		line-height: 1.15;
 
-		@include media('xl') {
+		@include media('md') {
 			font-size: 40px;
 			line-height: 1.1;
 		}
@@ -44,7 +44,7 @@
 		text-align: center;
 		color: var(--black);
 
-		@include media('xl') {
+		@include media('md') {
 			font-size: 18px;
 			line-height: 1.22;
 		}
