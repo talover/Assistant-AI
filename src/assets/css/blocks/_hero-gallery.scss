@@ -1,0 +1,63 @@
+.hero-gallery {
+	margin-top: 60px;
+	position: relative;
+	z-index: 50;
+	display: flex;
+	user-select: none;
+	column-gap: 8px;
+
+	@include media('xl') {
+		margin-top: 72px;
+		column-gap: 20px;
+	}
+
+	&__content {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: space-around;
+		column-gap: 8px;
+		min-width: 100%;
+		animation: scroll 60s linear infinite;
+		will-change: transform;
+
+		@include media('xl') {
+			column-gap: 20px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		width: 228px;
+
+		@include media('xl') {
+			width: 285px;
+		}
+	}
+
+	&__img-w {
+		border-radius: 16px;
+		position: relative;
+		z-index: 2;
+		box-shadow: 0 0 16px 0 rgba(0, 87, 255, 0.08);
+
+		@include media('xl') {
+			border-radius: 20px;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+	}
+}
+
+@keyframes scroll {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		transform: translate3d(-100%, 0, 0);
+	}
+}

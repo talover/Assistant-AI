@@ -2,6 +2,6 @@
 {% block title %}markup rig{% endblock %}
 
 {% block page %}
-	<div>test home</div>
+	{% include 'partials/hero.twig' with hero %}
+	{% include 'partials/benefits.twig' %}
 {% endblock %}
-

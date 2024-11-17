@@ -1,0 +1,63 @@
+.hero {
+	background: url("#{$rootUrl}bg-section-mob.webp") no-repeat center top;
+	background-size: 2240px auto;
+	min-height: 780px;
+	
+	@include media('xl') {
+		background-image: url('#{$rootUrl}bg-section.webp');
+		min-height: 890px;
+		background-size: 3230px auto;
+	}
+
+	&__cont {
+		padding-top: 140px;
+		text-align: center;
+
+		@include media('xl') {
+			padding-top: 180px;
+		}
+	}
+
+	&__title {
+		margin: 0 0 10px;
+		font-weight: 600;
+		font-size: 26px;
+		line-height: 1.15;
+
+		@include media('xl') {
+			font-size: 40px;
+			line-height: 1.1;
+		}
+	}
+
+	&__typing {
+		.typed-cursor {
+			display: inline-block;
+			vertical-align: 2px;
+		}
+	}
+
+	&__desc {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 1.25;
+		text-align: center;
+		color: var(--black);
+
+		@include media('xl') {
+			font-size: 18px;
+			line-height: 1.22;
+		}
+	}
+
+	&__btn-box {
+		margin-top: 24px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include media('xl') {
+			margin-top: 28px;
+		}
+	}
+}

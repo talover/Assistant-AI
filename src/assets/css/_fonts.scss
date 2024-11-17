@@ -1,45 +1,44 @@
 @font-face {
-  font-family: 'Fira Sans Condensed';
-  src: url('#{$rootUrlFonts}FiraSansCondensed/FiraSansCondensed-Regular.woff2') format('woff2'),
-  url('#{$rootUrlFonts}FiraSansCondensed/FiraSansCondensed-Regular.woff') format('woff');
+  font-family: 'Myriad Pro';
+  src: url('#{$rootUrlFonts}MyriadPro/MyriadPro-Semibold.woff2') format('woff2'),
+  url('#{$rootUrlFonts}MyriadPro/MyriadPro-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('#{$rootUrlFonts}MyriadPro/MyriadPro-Regular.woff2') format('woff2'),
+  url('#{$rootUrlFonts}MyriadPro/MyriadPro-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fira Sans Condensed';
-  src: url('#{$rootUrlFonts}FiraSansCondensed/FiraSansCondensed-Italic.woff2') format('woff2'),
-  url('#{$rootUrlFonts}FiraSansCondensed/FiraSansCondensed-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fira Sans Extra Condensed';
-  src: url('#{$rootUrlFonts}FiraSansExtraCondensed/FiraSansExtraCondensed-Medium.woff2') format('woff2'),
-  url('#{$rootUrlFonts}FiraSansExtraCondensed/FiraSansExtraCondensed-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'SONGER Condensed';
-  src: url('#{$rootUrlFonts}SongerCondensed/SONGERCondensed-Bold.woff2') format('woff2'),
-  url('#{$rootUrlFonts}SongerCondensed/SONGERCondensed-Bold.woff') format('woff');
+  font-family: 'Myriad Pro';
+  src: url('#{$rootUrlFonts}MyriadPro/MyriadPro-Bold.woff2') format('woff2'),
+  url('#{$rootUrlFonts}MyriadPro/MyriadPro-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('#{$rootUrlFonts}MyriadPro/MyriadPro-Light.woff2') format('woff2'),
+  url('#{$rootUrlFonts}MyriadPro/MyriadPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: 'SONGER Condensed';
-  src: url('#{$rootUrlFonts}SongerCondensed/SONGERCondensed.woff2') format('woff2'),
-  url('#{$rootUrlFonts}SongerCondensed/SONGERCondensed.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Montserrat';
+  src: url('#{$rootUrlFonts}Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+  url('#{$rootUrlFonts}Montserrat/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

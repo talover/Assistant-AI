@@ -1,0 +1,43 @@
+<section class="hero">
+	<div class="main-container">
+		<div class="hero__cont">
+			<h1 class="hero__title">
+				Передовая нейросеть <br>
+				для генерации
+				<span  class="text-color_primary hero__typing">
+					<span id="hero-text-typing"></span>
+				</span>
+			</h1>
+
+			<div class="hero__desc">
+				Универсальная платформа для творческого самовыражения, <br class="hidden_max-sm">которая автоматизирует процесс создания контента <br class="hidden_max-sm">и вдохновляет
+				<br class="hidden_sm">на новые идеи
+			</div>
+
+			<div class="hero__btn-box">
+				<a href="" class="btn btn_dark">Начать чат</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-gallery">
+		<div class="hero-gallery__content">
+			{% for item in hero.gallery %}
+				<div class="hero-gallery__item">
+					<div class="hero-gallery__img-w">
+						<img class="hero-gallery__img" src="{{ item }}" alt="">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="hero-gallery__content">
+			{% for item in hero.gallery %}
+				<div class="hero-gallery__item">
+					<div class="hero-gallery__img-w">
+						<img class="hero-gallery__img" src="{{ item }}" alt="">
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

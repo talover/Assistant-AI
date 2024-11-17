@@ -1,0 +1,25 @@
+.benefits {
+	margin-top: 160px;
+	&__inner {
+		position: relative;
+		background: #000;
+		height: 4500px;
+	}
+
+	&__bg {
+		position: sticky;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+	}
+
+	&__bg-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: red;
+	}
+}
