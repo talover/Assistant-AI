@@ -1,0 +1,35 @@
+<section class="gen-text">
+	<div class="main-container">
+		<div class="gen-text__header">
+			<h2 class="section-title-2 gen-text__title">
+				Генерация <span class="text-color_primary">текста</span>
+			</h2>
+
+			<p class="section-desc">
+				Создавайте статьи, письма, описания продуктов и многое другое за считанные секунды. Введите свой запрос, <br class="hidden_max-md">и нейросеть сгенерирует текст за считанные секунды
+			</p>
+		</div>
+	</div>
+
+	<div class="gen-text__bg"></div>
+
+	<div class="gen-text__cont">
+		<div class="main-container">
+			<div class="swiper slider-m-scroll gen-text__slider">
+				<div class="swiper-wrapper gen-text__slider-inner">
+					{% for item in genText %}
+						<div class="swiper-slide">
+							<div class="card gen-text__card">
+								<div class="card__cont gen-text__card-cont">
+									<h4 class="card__name">{{ item.name }}</h4>
+									<p class="card__desc">{{ item.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>

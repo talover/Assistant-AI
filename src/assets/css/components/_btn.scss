@@ -24,9 +24,23 @@
 	&_dark {
 		background: var(--black);
 		color: var(--white);
+		border-color:  var(--black);
 
 		&:hover {
 			background: var(--blue);
+			border-color:  var(--blue);
+		}
+	}
+
+	&_white {
+		color: var(--black);
+		background: var(--white);
+		border-color:  var(--white);
+
+		&:hover {
+			background: var(--blue);
+			border-color:  var(--blue);
+			color: var(--white);
 		}
 	}
 }

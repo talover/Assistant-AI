@@ -1,0 +1,83 @@
+<section class="comments">
+	<div class="main-container">
+		<h2 class="section-title comments__title">
+			<span class="text-color_primary">Честные</span> отзывы <br class="hidden_md">о нашем сервисе
+		</h2>
+		<div class="comments__inner">
+			<div class="comments__hero">
+				{% set itemHero = comments|first %}
+				<div class="comments-card-hero">
+					<div class="comments-card-hero__img-w">
+						<img class="comments-card-hero__img" src="{{ itemHero.img }}" alt="">
+					</div>
+
+					<div class="comments-card-hero__cont">
+						<div class="comments-card-hero__header">
+							<div class="comments-card-hero__header-cont">
+								<h3 class="comments-card-hero__name">{{ itemHero.name }}</h3>
+								<div class="comments-card-hero__category">{{ itemHero.category }}</div>
+							</div>
+
+							<div class="comments-card-hero__rating">{{ itemHero.rating }}</div>
+						</div>
+
+						<p class="comments-card-hero__desc">{{ itemHero.desc }}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="comments__cont">
+				<div class="swiper slider-m-scroll comments__slider comments__scroll-content">
+					<div class="swiper-wrapper comments__slider-inner">
+						{% for item in comments %}
+							<div class="swiper-slide comments__slide">
+								<div class="comments-card">
+									<div class="comments-card__img-w">
+										<img class="comments-card__img" src="{{ item.img }}" alt="">
+									</div>
+
+									<div class="comments-card__cont">
+										<div class="comments-card__header">
+											<div class="comments-card__header-cont">
+												<h3 class="comments-card__name">{{ item.name }}</h3>
+												<div class="comments-card__category">{{ item.category }}</div>
+											</div>
+
+											<div class="comments-card__rating">{{ item.rating }}</div>
+										</div>
+
+										<p class="comments-card__desc">{{ item.desc }}</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<div class="comments__scroll-list comments__scroll-content hidden_max-xl">
+					{% for item in comments %}
+						<div class="comments-card">
+							<div class="comments-card__img-w">
+								<img class="comments-card__img" src="{{ item.img }}" alt="">
+							</div>
+
+							<div class="comments-card__cont">
+								<div class="comments-card__header">
+									<div class="comments-card__header-cont">
+										<h3 class="comments-card__name">{{ item.name }}</h3>
+										<div class="comments-card__category">{{ item.category }}</div>
+									</div>
+
+									<div class="comments-card__rating">{{ item.rating }}</div>
+								</div>
+
+								<p class="comments-card__desc">{{ item.desc }}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

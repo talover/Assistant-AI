@@ -1,15 +1,15 @@
 .benefits {
 	$self: &;
-	margin-top: 40px;
 	overflow: clip;
 	padding-bottom: 20px;
+	margin-top: -20px;
 
 	@include media('md') {
 		margin-top: 70px;
 	}
 
 	@include media('xl') {
-		margin-top: 112px;
+		margin-top: 70px;
 	}
 
 	&__inner {
@@ -25,7 +25,7 @@
 
 		@include media('md') {
 			height: 480px;
-			background-image: url("#{$rootUrl}benefits/benefits-bg.webp") center top;
+			background-image: url("#{$rootUrl}benefits/benefits-bg.webp");
 			background-size: 738px auto;
 		}
 
@@ -43,15 +43,20 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		padding-block: 40px;
+		padding: 90px 0 40px;
 
 		@include media('md') {
-			padding-block: 50px;
+			padding: 90px 0 50px;
+		}
+
+		@include media('xl') {
+			padding-top: 110px;
 		}
 	}
 
 	&__list {
-		margin-top: 204px;
+		//margin-top: 204px;
+		margin-top: 20px;
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
@@ -60,10 +65,11 @@
 		row-gap: 12px;
 
 		@include media('md') {
-			margin-top: 100px;
+			//margin-top: 100px;
+			margin-top: -50px;
 			position: sticky;
 			top: 190px;
-			left: 0;
+			left: 50px;
 		}
 	}
 
@@ -86,6 +92,10 @@
 		}
 
 		@include media('lg') {
+			max-width: 320px;
+		}
+
+		@include media('xl') {
 			max-width: 386px;
 		}
 	}
@@ -130,8 +140,8 @@
 	&__item_2 {
 		z-index: 10;
 
-		@include media('md') {
-
+		@include media('lg') {
+			order: 2;
 		}
 
 		#{$self}__item-inner {
@@ -149,6 +159,10 @@
 
 		@include media('md') {
 			margin: 0 0 0 auto;
+		}
+
+		@include media('lg') {
+			order: 1;
 		}
 
 		#{$self}__item-inner {

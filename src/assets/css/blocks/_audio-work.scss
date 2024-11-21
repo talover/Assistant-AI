@@ -1,0 +1,67 @@
+.audio-work {
+	margin-block: 60px;
+
+	@include media('md') {
+		margin-top: 95px;
+	}
+
+	@include media('xl') {
+		margin-top: 112px;
+	}
+
+	&__header {
+		text-align: center;
+		max-width: 504px;
+		margin-inline: auto;
+		margin-bottom: 27px;
+
+		@include media('md') {
+			margin-bottom: 48px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 8px;
+
+		@include media('md') {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__cont {
+
+	}
+
+	&__slider {
+		@include media('xl') {
+			padding: 0;
+		}
+	}
+
+	&__slider-inner {
+		@include media('xl') {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+	&__card {
+		min-height: 298px;
+		box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.06);
+		border-radius: 16px;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+
+		@include media('xl') {
+			min-height: 344px;
+		}
+	}
+
+	&__card-cont {
+		@include media('xl') {
+			box-shadow: none;
+			padding: 36px 24px 20px 24px;
+		}
+	}
+}

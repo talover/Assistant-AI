@@ -9,3 +9,15 @@
 		line-height: 1.12;
 	}
 }
+
+.section-title-2 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.2;
+	margin: 0;
+
+	@include media('md') {
+		font-size: 26px;
+		line-height: 1ю23;
+	}
+}

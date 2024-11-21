@@ -2,4 +2,17 @@
 	&_primary {
 		color: var(--blue) !important;
 	}
+
+	&_pink {
+		color: var(--pink) !important;
+	}
+
+	&_warning {
+		color: var(--yellow) !important;
+	}
+
+	&_success {
+		color: var(--green) !important;
+	}
 }
+

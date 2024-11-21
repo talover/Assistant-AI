@@ -1,0 +1,30 @@
+<section class="self-expression">
+	<div class="main-container">
+		<div class="self-expression__inner">
+			<div class="self-expression__cont">
+				<h2 class="section-title self-expression__title">
+					<span class="text-color_primary">Assistant AI</span> — для тех,<br class="hidden_sm">
+					кто <br class="hidden_max-sm">хочет выразить себя
+				</h2>
+				<p class="section-desc m-0">Фотографы, дизайнеры, художники и просто любители — вы найдёте здесь всё, что нужно
+					для создания ярких визуальных решений</p>
+
+				<a href="" class="btn btn_dark self-expression__btn active">Попробовать сейчас</a>
+
+				<div class="self-expression__p-wrap">
+					{% for item in selfExpression.avatar %}
+						<div class="self-expression__avatar self-expression__avatar_{{ loop.index }}">
+							<img class="self-expression__avatar-img" src="{{ item }}" alt="">
+						</div>
+					{% endfor %}
+
+					{% for item in selfExpression.label %}
+						<div class="self-expression__label self-expression__label_{{ loop.index }}">
+							{{ item }}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

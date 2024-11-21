@@ -1,0 +1,37 @@
+<section class="audio-work">
+	<div class="main-container">
+		<div class="audio-work__header">
+			<h2 class="section-title-2 audio-work__title">
+				Работа с <span class="text-color_primary">аудио</span>
+			</h2>
+
+			<p class="section-desc">
+				Assistant AI преобразует аудио в текст или сгенерирует мелодию, которая будет неотличима от той,
+				<br class="hidden_max-md">что вы слышите по радио
+			</p>
+		</div>
+
+		<div class="audio-work__cont">
+			<div class="swiper slider-m-scroll audio-work__slider">
+				<div class="swiper-wrapper audio-work__slider-inner">
+					{% for item in audioWork %}
+						<div class="swiper-slide">
+							<div class="card audio-work__card">
+								<div class="card__img-w">
+									<img class="card__img" src="{{ item.img }}" alt="">
+								</div>
+
+								<div class="card__cont audio-work__card-cont">
+									<h4 class="card__name">{{ item.name }}</h4>
+									<p class="card__desc">{{ item.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>
+

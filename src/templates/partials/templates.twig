@@ -1,0 +1,115 @@
+<div class="main-container">
+	<section class="templates">
+		<h2 class="section-title-2 templates__title">
+			Более <span class="text-color_primary">50 шаблонов</span> <br class="hidden_md">для генерации
+		</h2>
+
+		<div class="templates__inner">
+			<div class="templates__scroll">
+				<div class="templates__scroll-content">
+					{% for item in list1 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="templates__scroll-content">
+					{% for item in list1 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="templates__scroll templates__scroll_reverse">
+				<div class="templates__scroll-content">
+					{% for item in list2 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="templates__scroll-content">
+					{% for item in list2 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="templates__scroll">
+				<div class="templates__scroll-content">
+					{% for item in list3 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="templates__scroll-content">
+					{% for item in list3 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="templates__scroll templates__scroll_reverse">
+				<div class="templates__scroll-content">
+					{% for item in list4 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="templates__scroll-content">
+					{% for item in list4 %}
+						<div class="templates__item">
+							<svg class="icon templates__item-icon {{ item.iconClass }}">
+								<use href="img/sprite.svg#{{ item.icon }}"></use>
+							</svg>
+
+							<h3 class="templates__item-name">{{ item.name }}</h3>
+							<p class="templates__item-desc">{{ item.desc }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+

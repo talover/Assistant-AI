@@ -1,0 +1,38 @@
+<section class="gen-video">
+	<div class="main-container">
+		<div class="gen-video__header">
+			<h2 class="section-title-2 gen-video__title">
+				Генерация <span class="text-color_primary">видео</span>
+
+			</h2>
+
+			<p class="section-desc">
+				Нейросеть поможет сгенерировать уникальное видео
+				<br class="hidden_max-md">в нужном стиле для любых проектов или вставить
+				<br class="hidden_max-md">ваше лицо в любое видео
+			</p>
+		</div>
+
+		<div class="gen-video__cont">
+			<div class="swiper slider-m-scroll gen-video__slider">
+				<div class="swiper-wrapper gen-video__slider-inner">
+					{% for item in genVideo %}
+						<div class="swiper-slide">
+							<div class="card gen-video__card">
+								<div class="card__img-w">
+									<img class="card__img" src="{{ item.img }}" alt="">
+								</div>
+
+								<div class="card__cont gen-video__card-cont">
+									<h4 class="card__name">{{ item.name }}</h4>
+									<p class="card__desc">{{ item.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>

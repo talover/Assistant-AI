@@ -1,0 +1,47 @@
+<section class="opts">
+	<div class="main-container opts__header">
+		<h2 class="section-title opts__title">
+			Возможности <span class="text-color_primary">Assistant AI</span>
+		</h2>
+		<h3 class="opts__sub-title">Генерация изображений</h3>
+		<p class="section-desc">
+			Создавайте уникальные изображения, удаляйте фон, <br class="hidden_max-md">меняйте лица на фото, улучшайте качество,
+			и открывайте для себя множество
+			других функций Assistant AI
+		</p>
+	</div>
+
+	<div class="opts__bg">
+		<div class="opts__bg-inner"></div>
+	</div>
+
+	<div class="opts__cont">
+		<div class="main-container">
+			<div class="swiper slider-m-scroll opts__slider">
+				<div class="swiper-wrapper opts__slider-inner">
+					{% for item in opts %}
+						<div class="swiper-slide opts__slide opts__slide_{{ loop.index }}">
+							<div class="card animation-card"
+{#								{% for key, value in item.aos %}#}
+{#									{{ key }}="{{ value }}"#}
+{#								{% endfor %}#}
+							>
+
+
+								<div class="card__img-w">
+									<img class="card__img" src="{{ item.img }}" alt="">
+								</div>
+
+								<div class="card__cont">
+									<h4 class="card__name">{{ item.name }}</h4>
+									<p class="card__desc">{{ item.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>

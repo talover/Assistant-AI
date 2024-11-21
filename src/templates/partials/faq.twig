@@ -1,0 +1,24 @@
+<section id="faq" class="faq">
+	<div class="main-container faq__inner">
+		<h2 class="section-title faq__title">FAQ</h2>
+
+		<ul class="faq-list">
+			{% for item in faq %}
+				<li class="faq-list__item">
+					<div class="faq-list__header">
+						<h3 class="faq-list__name">{{ item.name }}</h3>
+						<div class="faq-list__btn">
+							<svg class="icon faq-list__icon">
+								<use href="img/sprite.svg#add"></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="faq-list__cont">
+						<div class="faq-list__inner">{{ item.desc }}</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

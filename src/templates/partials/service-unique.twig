@@ -1,0 +1,38 @@
+<section class="service-unique">
+	<div class="main-container">
+		<h2 class="section-title service-unique__title">
+			<span class="text-color_primary">Уникальность</span> сервиса
+		</h2>
+
+		<div class="service-unique__list">
+			{% for item in serviceUnique %}
+				<div class="service-unique__item service-unique__item_{{ loop.index }}">
+					<div class="service-unique__item-cont">
+						<h3 class="service-unique__name">{{ item.name }}</h3>
+						<p class="service-unique__desc">{{ item.desc }}</p>
+					</div>
+
+					{% if item.img %}
+						<div class="service-unique__img-w service-unique__single-img">
+							<img class="service-unique__img" src="{{ item.img }}" alt="">
+						</div>
+					{% endif %}
+
+					{% if item.imgGroup %}
+						<div class="service-unique__img-group">
+							{% for item in item.imgGroup %}
+								<div class="service-unique__img-w service-unique__img-group-item service-unique__img-group-item_{{ loop.index }}">
+									<img class="service-unique__img" src="{{ item }}" alt="">
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="service-unique__footer">
+			<a href="" class="btn btn_dark">Начать чат</a>
+		</div>
+	</div>
+</section>

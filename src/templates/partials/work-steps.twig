@@ -1,0 +1,17 @@
+<section class="work-steps">
+	<div class="main-container">
+		<h2 class="section-title work-steps__title">
+			Этапы работы с <span class="text-color_primary">Assistant AI</span>
+		</h2>
+
+		<div class="work-steps__list">
+			{% for item in workSteps %}
+				<div class="work-steps__item work-steps__item_{{ loop.index }}">
+					<div class="work-steps__item-num">0{{ loop.index }}</div>
+					<h3 class="work-steps__item-name">{{ item.name }}</h3>
+					<p class="work-steps__item-desc">{{ item.desc }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

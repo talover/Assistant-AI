@@ -1,3 +1,40 @@
-<footer>
+<footer class="footer">
+	<div class="main-container footer__inner">
+		<div class="footer__cont">
+			<div class="footer__logo-w">
+				<img class="footer__logo" src="img/logo.svg" alt="">
 
+				<div class="footer__copyright hidden_max-lg">
+					©2024 Assistant AI.<br>Все права защищены
+				</div>
+			</div>
+
+			<div class="footer__menu-w">
+				{% for item in footerMenu %}
+					<div class="footer__col">
+						<h3 class="footer__category-title">{{ item.title }}</h3>
+
+						<ul class="footer-list">
+							{% for item in item.list %}
+								<li class="footer-list__item">
+									<a href="{{ item.url }}" class="footer-list__link" {% if item.target %}target="_blank"{% endif %}>
+										{{ item.name }}
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="footer__auxiliary-w">
+				<a href="" class="btn btn_white">Регистрация</a>
+
+				<div class="footer__copyright  hidden_lg">
+					©2024 Assistant AI.<br>Все права защищены
+				</div>
+			</div>
+		</div>
+		<div class="footer__bg-text">Assistant AI</div>
+	</div>
 </footer>

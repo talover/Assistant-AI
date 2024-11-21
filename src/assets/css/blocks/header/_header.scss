@@ -1,0 +1,110 @@
+.header {
+	$self: &;
+	position: fixed;
+	top: 20px;
+	left: 14px;
+	right: 14px;
+	z-index: 300;
+	margin: auto;
+	border-radius: 40px;
+	transition: 0.3s top ease;
+	max-width: 1200px;
+
+	@include media('xl') {
+		top: 24px;
+	}
+
+	&_active {
+		top: 14px;
+
+		@include media('lg') {
+			#{$self}__bg,
+			#{$self}__inner {
+				height: 56px;
+			}
+		}
+
+		@include media('xl') {
+			#{$self}__bg,
+			#{$self}__inner {
+				height: 60px;
+				padding-inline: 16px;
+			}
+		}
+ 	}
+
+	&_menu-open {
+		@include media('lg',max) {
+			top: 14px;
+
+			#{$self}__bg {
+				background: var(--white);
+			}
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 52px;
+		backdrop-filter: blur(8px);
+		box-shadow: 0 0 20px 0 rgba(0, 87, 255, 0.08);
+		background: var(--white-container-40);
+		border-radius: 40px;
+		border: 1px solid var(--stroke-48);
+		z-index: 20;
+		transition: 0.3s all ease;
+
+		@include media('lg') {
+			height: 60px;
+		}
+
+		@include media('xl') {
+			height: 68px;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 20;
+		height: 52px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 0 4px 0 12px;
+
+		@include media('lg') {
+			height: 60px;
+			padding: 0 16px;
+			transition: 0.3s all ease;
+		}
+
+		@include media('xl') {
+			padding: 0 24px;
+			height: 68px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		width: 117px;
+		position: relative;
+		z-index: 30;
+
+		@include media('lg') {
+			width: 140px;
+		}
+
+		@include media('xl') {
+			width: 156px;
+		}
+	}
+
+	&__logo-img {
+		display: block;
+		width: 100%;
+	}
+}
+

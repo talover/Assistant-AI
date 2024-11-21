@@ -1,0 +1,56 @@
+.menu-btn {
+	$selfMenuBtn: &;
+	border-radius: 50%;
+	padding: 0;
+	margin: 0;
+	width: 44px;
+	height: 44px;
+	border: 0;
+	outline: transparent;
+	background: var(--white);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 5px;
+	margin-left: auto;
+	text-align: unset;
+	position: relative;
+	z-index: 30;
+
+	@include media('lg') {
+		display: none;
+	}
+
+	&__item {
+		border-radius: 4px;
+		width: 20px;
+		height: 2px;
+		display: block;
+		background: var(--black);
+		transition: 0.3s all ease;
+		position: relative;
+
+		&_2 {
+			transition: 0.1s all ease;
+		}
+	}
+
+	&_active {
+		#{$selfMenuBtn}__item_1 {
+			transform: rotate(45deg);
+			top: 7px;
+		}
+
+		#{$selfMenuBtn}__item_2 {
+			transform: translateX(2px);
+			opacity: 0;
+		}
+
+		#{$selfMenuBtn}__item_3 {
+			transform: rotate(-45deg);
+			top: -7px;
+		}
+	}
+}
