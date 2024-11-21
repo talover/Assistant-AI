@@ -47,6 +47,10 @@
 			position: relative;
 			overflow: clip;
 
+			@media (min-height: 780px) {
+				background-size: auto 100%;
+			}
+
 			@include media('md') {
 				background-size: auto 100%;
 			}
