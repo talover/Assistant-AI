@@ -3,6 +3,7 @@
 	background: url("#{$rootUrl}self-expression-bg.webp") no-repeat center;
 	background-size: auto 100%;
 	margin-top: 74px;
+	scroll-margin-top: 120px;
 
 	@include media('md') {
 		margin-top: 196px;

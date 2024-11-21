@@ -1,5 +1,6 @@
 .gen-video {
 	margin-block: 60px;
+	scroll-margin-top: 120px;
 
 	@include media('md') {
 		margin-top: 95px;

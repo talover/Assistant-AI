@@ -1,4 +1,4 @@
-<section class="opts">
+<section id="opts" class="opts">
 	<div class="main-container opts__header">
 		<h2 class="section-title opts__title">
 			Возможности <span class="text-color_primary">Assistant AI</span>
@@ -22,9 +22,9 @@
 					{% for item in opts %}
 						<div class="swiper-slide opts__slide opts__slide_{{ loop.index }}">
 							<div class="card animation-card"
-{#								{% for key, value in item.aos %}#}
-{#									{{ key }}="{{ value }}"#}
-{#								{% endfor %}#}
+								{% for key, value in item.aos %}
+									{{ key }}="{{ value }}"
+								{% endfor %}
 							>
 
 

@@ -14,14 +14,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const menu = document.querySelector('.menu');
     const header = document.querySelector('.header');
+    const menuLinks = document.querySelectorAll('.menu-list__link, .sub-menu-list__link');
 
     menuBtn.addEventListener('click', () => {
-        // Тогл класів
         menuBtn.classList.toggle('menu-btn_active');
         body.classList.toggle('menu-open');
         menu.classList.toggle('menu_active');
         header.classList.toggle('header_menu-open');
     });
+
+    function closeMenu() {
+        menuBtn.classList.remove('menu-btn_active');
+        body.classList.remove('menu-open');
+        menu.classList.remove('menu_active');
+        header.classList.remove('header_menu-open');
+    }
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
     // -- hero typing --
     var typed = new Typed('#hero-text-typing', {
         strings: ['контента'],
@@ -130,49 +142,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // -- aos --
-// document.addEventListener('DOMContentLoaded', function () {
-//     if (window.innerWidth >= 1280) {
-//         AOS.init();
-//     }
-// });
-//
-// window.addEventListener('resize', function () {
-//     if (window.innerWidth < 1280) {
-//         AOS.refreshHard();
-//     } else {
-//         AOS.init();
-//     }
-// });
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const initAnimation = () => {
-        if (window.innerWidth > 1279) {
-            const timeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '.opts',
-                    start: 'top top',
-                    end: '+=1000',
-                    scrub: true,
-                    pin: true,
-                    anticipatePin: 1,
-                }
-            });
-
-            timeline.to('.animation-card', {
-                yPercent: -100,
-                ease: 'none',
-                stagger: 0.1,
-            });
-        }
-    };
-
-    initAnimation();
-
-    window.addEventListener('resize', () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        initAnimation();
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth >= 1280) {
+        AOS.init();
+    }
 });
+
+window.addEventListener('resize', function () {
+    if (window.innerWidth < 1280) {
+        AOS.refreshHard();
+    } else {
+        AOS.init();
+    }
+});
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     gsap.registerPlugin(ScrollTrigger);
+//
+//     const initAnimation = () => {
+//         if (window.innerWidth > 1279) {
+//             const timeline = gsap.timeline({
+//                 scrollTrigger: {
+//                     trigger: '.opts',
+//                     start: 'top top',
+//                     end: '+=1000',
+//                     scrub: true,
+//                     pin: true,
+//                     anticipatePin: 1,
+//                 }
+//             });
+//
+//             timeline.to('.animation-card', {
+//                 yPercent: -100,
+//                 ease: 'none',
+//                 stagger: 0.1,
+//             });
+//         }
+//     };
+//
+//     initAnimation();
+//
+//     window.addEventListener('resize', () => {
+//         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+//         initAnimation();
+//     });
+// });

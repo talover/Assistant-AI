@@ -1,5 +1,6 @@
 .gen-text {
 	margin-block: 60px;
+	scroll-margin-top: 120px;
 
 	@include media('xl') {
 		margin-top: 64px;
